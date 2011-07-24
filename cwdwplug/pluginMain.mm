@@ -122,13 +122,13 @@ static long VLCEyeTVPluginGetInformation(VLCEyeTVPluginGlobals_t *globals, long*
     
     if( outName )
     {
-      char* name = "cwdwgw Plug-In";
+      const char* name = "cwdwgw Plug-In";
       strcpy( &outName[0], name);
     }
     
     if( outDescription )
     {
-      char* desc = "This Plug-In connects EyeTV to the cwdwgw.";
+      const char* desc = "This Plug-In connects EyeTV to the cwdwgw.";
       strcpy( &outDescription[0], desc);
     }
   }

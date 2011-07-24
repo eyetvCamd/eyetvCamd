@@ -193,7 +193,7 @@ extern NSCondition *pidFilter[MAX_DEVICES];
 
 - (void)logMessage:(NSString *)msg
 {
-  [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"cwdwgwLogObserver" object:msg];
+  [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"cwdwgwLogObserver" object:msg userInfo:nil deliverImmediately:true];
 }
 
 - (void)sendData:(NSArray *)parray
@@ -212,7 +212,7 @@ extern NSCondition *pidFilter[MAX_DEVICES];
   [arch encodeObject:parray forKey:@"DArray"];
   [arch finishEncoding];
   NSString *msg = [[NSString alloc] initWithData:dmsg encoding:NSASCIIStringEncoding];
-  [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"cwdwgwPIDandControlObserver" object:msg];
+  [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"cwdwgwPIDandControlObserver" object:msg userInfo:nil deliverImmediately:true];
   [arch release];
   [msg release];
   [dmsg release];

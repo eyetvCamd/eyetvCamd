@@ -831,7 +831,6 @@ struct pcit {
  *
  *    The following semantics apply to all the descriptors defined in this
  *    subclause:
-
  *
  *    descriptor_tag: The descriptor tag is an 8-bit field which identifies
  *                    each descriptor. Those values with MPEG-2 normative

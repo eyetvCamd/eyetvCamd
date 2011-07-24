@@ -754,7 +754,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 	[arch encodeObject:pdata forKey:@"DMessage"];
 	[arch finishEncoding];
 	NSString *msg = [[NSString alloc] initWithData:dmsg encoding:NSASCIIStringEncoding];
-	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:pname object:msg];
+	[[NSDistributedNotificationCenter defaultCenter] postNotificationName:pname object:msg userInfo:nil deliverImmediately:true];
 	[arch release];
 	[msg release];
 	[dmsg release];

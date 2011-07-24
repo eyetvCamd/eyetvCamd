@@ -83,8 +83,8 @@ static inline void pluginLog(const char *format, ...)
 {
   va_list ap;
   va_start(ap, format);
-  NSString *str = [[NSString alloc] initWithFormat:[NSString stringWithCString:format] arguments:ap];
-  [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"cwdwgwLogObserver" object:str];
+  NSString *str = [[NSString alloc] initWithFormat:[NSString stringWithUTF8String:format] arguments:ap];
+    [[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"cwdwgwLogObserver" object:str userInfo:nil deliverImmediately:true];
   va_end(ap);
   [str release];
 }
