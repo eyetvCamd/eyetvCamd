@@ -1,0 +1,7 @@
+Version 1.5 :
+- Added EMM support for Seca, Conax and Nagra
+- Partial EMM suport for NDS (EMM-U).
+- Fixed an issue to match both the emmPid and the curent CAID 
+   as some feed have 3 or more CAID using the same emmPid.
+- Added a cleint ID to the newcamd client, This will work with OSCam 
+   to identify eyetvCamd . This is just a cosmetic fix.
